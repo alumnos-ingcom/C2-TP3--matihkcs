@@ -14,18 +14,18 @@ def es_primo(numero):
         else:
             contador +=1
     if contador == 2:
+        return True
+    else:
+        return False
+            
+def prueba():
+
+    numero = int(input("escribe un numero: "))
+    if es_primo(numero):
         print("es primo")
     else:
         print("no es primo")
-            
-
-
-numero = int(input("escribe un numero: "))
-if es_primo(numero):
-    print("es primo")
-else:
-    print("no es primo")
     
         
 if __name__ == "__main__":
-    es_primo(numero)
+    prueba()
