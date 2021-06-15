@@ -6,6 +6,10 @@
 
 
 def es_palindromo(texto):
+    
+    """esta funcion dice si es palindromo o no"""
+    
+
     texto = texto.replace(" ", " ")
     texto_invertido = texto[::-1]
     if texto ==texto_invertido:
