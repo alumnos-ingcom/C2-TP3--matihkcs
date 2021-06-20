@@ -4,31 +4,46 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-
-def ordenar_mayor_a_menor(uno, dos, tres):
+def ordenar_menor_a_mayor(uno,dos,tres):
+    """Esta funcion, ordena los numeros de menor a mayor
+"""
     
-    if uno > dos and uno > tres:
-       return (uno)
-    if dos > tres and dos < uno:
-        return (dos)
-    if tres < dos and tres < uno:
-        return (tres)  
+    ingreso = [uno,dos,tres]
+    if uno < dos and dos < tres:
+        ingreso = [uno, dos ,tres]
+        return ingreso
+
+    elif uno < tres and tres < dos:
+        ingreso = [uno, tres,dos]
+        return ingreso
+    
+    elif dos < uno and uno < tres:
+        ingreso = [dos,uno, tres]
+        return ingreso
+    
+    elif dos < tres and tres < uno:
+        ingreso = [dos,tres,uno]
+        return ingreso
+    else:
+        ingreso = [tres,dos,uno]
+        return ingreso
+    return ()
+       
   
-def ordenar_menor_a_mayor(uno, dos, tres):
-    
-    
-    
-    
+
+
 def prueba():
+   
+    num1 = int(input('Ingrese un numero :'))
+    num2= int(input('Ingrese un numero :'))
+    num3 = int(input('Ingrese un numero :'))
+    
+    print (tuple(ordenar_menor_a_mayor(num1 ,num2 ,num3)))
     
     
-    uno = int(input("Ingrese un numero: "))
-    dos = int(input("Ingrese el segundo numero: "))
-    tres = int(input("Ingrese el tercer numero: "))
-    print (f" los numeros de menor a mayor: {ordenar_mayor_a_menor}")
-
-
-
 
 if __name__ == "__main__":
-    prueba()
+    prueba()   
+##        
+
+                      
